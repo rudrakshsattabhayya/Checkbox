@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>trial</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1><%=value[0].checked%> hello</h1>
+    <form action="/checkbox" method="post">
+      <input type="checkbox" name="checkbox" class="checkbox" onChange="this.form.submit()" value="<%=value[0].id%>">
+    </form>
+    <script type="text/javascript">
+        $(".checkbox")[0].checked=<%=value[0].checked%>;
+    </script>
+  </body>
+</html>
